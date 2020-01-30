@@ -258,7 +258,8 @@ def setup_package():
                     install_requires=[
                         'numpy>={}'.format(NUMPY_MIN_VERSION),
                         'scipy>={}'.format(SCIPY_MIN_VERSION),
-                        'joblib>={}'.format(JOBLIB_MIN_VERSION)
+                        'joblib>={}'.format(JOBLIB_MIN_VERSION),
+                        'tqdm<=4.42.0'
                     ],
                     package_data={'': ['*.pxd']},
                     **extra_setuptools_args)
