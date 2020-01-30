@@ -49,7 +49,7 @@ def transform(raw_X, Py_ssize_t n_features, dtype,
     cdef np.int64_t size = 0
     cdef np.ndarray values = np.empty(capacity, dtype=dtype)
 
-    for x in tqdm(raw_X, len(raw_X)):
+    for x in tqdm(raw_X):
         for f, v in x:
             if isinstance(v, (str, unicode)):
                 f = "%s%s%s" % (f, '=', v)
